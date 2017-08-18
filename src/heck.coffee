@@ -15,7 +15,7 @@
 #   Alexander Paz <alexjpaz@gmail.com>
 #
 #
-repository = require('./repository')
+repository = require('../lib/repository')
 
 module.exports = (robot) ->
   robot.respond /hello/, (res) ->
