@@ -13,6 +13,9 @@
 #
 # Author:
 #   Alexander Paz <alexjpaz@gmail.com>
+#
+#
+repository = require('./repository')
 
 module.exports = (robot) ->
   robot.respond /hello/, (res) ->
@@ -20,3 +23,7 @@ module.exports = (robot) ->
 
   robot.hear /orly/, (res) ->
     res.send "yarly"
+
+  robot.hear /heck/, (res) ->
+    repository.get().then (url) =>
+      res.send(url);
